@@ -93,6 +93,10 @@
             }
 
             this.checkFormal(formal);
+
+            $(selector).html(msg);
+
+            return this;
         }
 
 
