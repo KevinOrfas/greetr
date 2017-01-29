@@ -64,6 +64,8 @@
             if(console) {
                 console.log(msg);
             }
+
+            return msg;
             
         }, 
 
@@ -97,18 +99,17 @@
         }, 
 
         HTMLGreeting: function(selector, formal){
+
             if(!$) {
                 throw 'jQuery not loaded';
             }
 
-            if(selector) {
+            if(!selector) {
                 throw 'Missing jQuery selector';
             }
 
-            this.checkFormal(formal);
-
             // inject the message in the chosen place in the DOM
-            $(selector).html(msg);
+            $(selector).html(this.checkFormal(formal));
 
             return this;
         }
