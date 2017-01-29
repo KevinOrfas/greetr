@@ -1,4 +1,4 @@
-(function(global, $) {
+;(function(global, $) {
     
     'use strict';
 
@@ -42,7 +42,7 @@
                 throw 'Invalid language';
             };
         },
-        
+
         // retrieve messages from object by referring to properties using [] syntax
         greeting: function(){
             return greetings[this.language] + ' ' + this.firstName + '!';
